@@ -22,7 +22,7 @@ class MetricSerializer(serializers.ModelSerializer):
 
 
 class MetricFilter(filters.FilterSet):
-    date_from = filters.DateFilter(field_name='date', lookup_expr='gt')
+    date_from = filters.DateFilter(field_name='date', lookup_expr='gte')
     date_to = filters.DateFilter(field_name='date', lookup_expr='lt')
 
     class Meta:
